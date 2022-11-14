@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+  font-family: Sans-Serif;
+}
+
+/* CSS HEX 
+--pearl-bush: #ece3dd;
+--pickled-bluewood: #2f4951;
+--bittersweet: #fb745c;
+--chestnut-rose: #d15a4c;
+--outer-space: #222928;
+--oslo-gray: #91989a;
+--mirage: #1a2336;
+--juniper: #6c8c8c;
+--slate-gray: #6c8494;
+
+
+SCSS HEX 
+$pearl-bush: #ece3dd;
+$pickled-bluewood: #2f4951;
+$bittersweet: #fb745c;
+$chestnut-rose: #d15a4c;
+$outer-space: #222928;
+$oslo-gray: #91989a;
+$mirage: #1a2336;
+$juniper: #6c8c8c;
+$slate-gray: #6c8494;
+
+
+ SCSS RGB
+--pearl-bush: rgba(236,227,221,1);
+--pickled-bluewood: rgba(47,73,81,1);
+--bittersweet: rgba(251,116,92,1);
+--chestnut-rose: rgba(209,90,76,1);
+--outer-space: rgba(34,41,40,1);
+--oslo-gray: rgba(145,152,154,1);
+--mirage: rgba(26,35,54,1);
+--juniper: rgba(108,140,140,1);
+--slate-gray: rgba(108,132,148,1);
+*/
