@@ -1,10 +1,11 @@
-
 import Cart from "./combinedPages/Cart";
-//import axios from "axios";
 import { useGetProductsQuery } from "../services/Products";
+import DotLoader from "react-spinners/cjs/DotLoader";
 import { GlobalStyle } from "../Styles/Global_Styles";
+import styled from "styled-components";
 function Product() {
   const { data, error, isLoading } = useGetProductsQuery();
+
   return (
     <>
       <GlobalStyle />
@@ -12,7 +13,9 @@ function Product() {
         <h1>Products</h1>
       </div>
       {isLoading ? (
-        <h1>loading</h1>
+        <Center>
+          <DotLoader className="innerCenter" color="#36d7b7" />
+        </Center>
       ) : data ? (
         <Cart />
       ) : error ? (
@@ -22,3 +25,11 @@ function Product() {
   );
 }
 export default Product;
+
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+`;

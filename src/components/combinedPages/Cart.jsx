@@ -3,15 +3,18 @@ import { GlobalStyle } from "../../Styles/Global_Styles";
 import { FaRupeeSign } from "react-icons/fa";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 const Cart = () => {
   const { data } = useGetProductsQuery();
+
   return (
     <>
       <GlobalStyle />
       <Container>
-        {data.map((index, id) => {
+        {data.map((index) => {
+          const { id } = index;
           return (
-            <Selection as={Link} to={index.id} key={index.id}>
+            <Selection as={Link} to={`/Products/${id}`} key={id}>
               <div className="img-div">
                 <img src={index.image} alt="images" />
               </div>

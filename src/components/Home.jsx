@@ -1,5 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
+import homeimage from "../images/Home.jpg";
 import { useNavigate } from "react-router-dom";
+
 import { GlobalStyle } from "../Styles/Global_Styles";
 
 const theme = {
@@ -45,7 +47,7 @@ const Img = styled.div`
 const Home = () => {
   const navigate = useNavigate();
   const pageNavigate = () => {
-    navigate("/Product");
+    navigate("/Products");
   };
   return (
     <>
@@ -61,12 +63,12 @@ const Home = () => {
             </p>
             <div>
               <button className="btn" onClick={() => pageNavigate()}>
-                GO TO PRODUCT
+                GO TO PRODUCTS
               </button>
             </div>
           </Text>
           <Img>
-            <img src="./Images/Home.jpg" alt="Home" />
+            <img src={homeimage} alt="home.jpg" />
           </Img>
         </Header>
         <div className="Comn-Heading">

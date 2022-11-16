@@ -1,6 +1,7 @@
 import { useState } from "react";
+import navbarlogo from "../images/yso-store.png";
 import { NavLink, Outlet } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
 import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../Styles/Global_Styles";
 
@@ -48,11 +49,10 @@ const NavBar = styled.div`
           }
         }
       }
-
     }
-          .active {
-        height: 70vh;
-      }
+    .active {
+      height: 70vh;
+    }
   }
 `;
 
@@ -78,7 +78,7 @@ const Navbar = () => {
       <>
         <GlobalStyle />
         <NavBar className="bg">
-          <img src="./Images/yso-store.png" alt="" />
+          <img src={navbarlogo} alt="" />
           <MenuBar
             className="btn-color"
             onClick={() => setactive((prevState) => !prevState)}
@@ -93,13 +93,18 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/Product">Product</NavLink>
+                <NavLink to="/Products">Products</NavLink>
               </li>
               <li>
                 <NavLink to="/About">About</NavLink>
               </li>
               <li>
                 <NavLink to="/More">More</NavLink>
+              </li>
+              <li>
+                <NavLink to="/cart">
+                  <FaShoppingCart />
+                </NavLink>
               </li>
             </ul>
           </NavLinksContainer>
